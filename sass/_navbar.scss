@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     color: $light;
-    padding: 0 2rem;
     a {
         color: $light;
     }
@@ -156,7 +155,32 @@
 //     }
 // }
 
+.close-overlay {
+    cursor: pointer;
+}
+
 
 .search-overlay {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $light;
+    background-color: black;
+    opacity: 100%;
+    transition: opacity 200ms linear;
+    
+
+}
+
+.hide-overlay {
+    z-index: -1;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 200ms linear;
 }

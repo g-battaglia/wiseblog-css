@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Sapio Theme</title>
 </head>
 <body>
     <!-- Navbar -->
+
     <nav class="navbar">
         <div class="container">
             <div class="main-navbar">
@@ -26,14 +28,6 @@
                             <span>Search</span>
                             <i class="fas fa-search"></i>
                         </a>
-        
-        
-                        <div class="search-overlay">
-                            <form class="navbar__search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-                        </div>
                     </div>
                 </div>
                 <div class="under-nav">
@@ -61,6 +55,17 @@
         
             </div>
         </div>
+
+        <div class="search-overlay hide-overlay">
+            <i class="fas fa-times close-overlay"></i>
+            <h2>Search for:</h2>
+            <form class="navbar__search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <p>Please Enter to begin your search.</p>
+        </div>
+
     </nav>
     <!-- End Navabr -->
 

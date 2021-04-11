@@ -19,4 +19,5 @@ a {
 .container {
     max-width: map-get($breakpoints, xl);
     margin: auto;
+    padding: 0 2rem;
 }
