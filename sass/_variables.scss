@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&display=swap');
+// font-family: 'Abril Fatface', cursive;
+// font-family: 'Lato', sans-serif;
+
+// Colors:
+
+$light: #f2efef;
+$dark: #11131a;
+$highlight: #6eaccc;
+$highlightDark: #8291b7;
+$grey: #aaaaaa;
+
+
+// Others:
+$title-font: 'Abril Fatface', cursive;
+$main-font: 'Lato', sans-serif;
+
+$radius: 2.5px;
+$box-shadow: 1px 3px 10px rgba($color: #000000, $alpha: 0.2);
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
