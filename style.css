@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f5f3f3;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.navbar {
+  background-color: #1a1919;
+}
+
+.main-navbar {
+  display: flex;
+  flex-direction: column;
+  color: #f5f3f3;
+}
+.main-navbar a {
+  color: #f5f3f3;
+}
+.main-navbar .upper-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-navbar .upper-nav .navbar-social {
+  font-size: 1.25rem;
+}
+.main-navbar .upper-nav .navbar-social i {
+  padding-right: 0.5em;
+  color: #aaaaaa;
+  transition: color 200ms linear;
+}
+.main-navbar .upper-nav .navbar-social i:hover {
+  color: #f5f3f3;
+  transition: color 200ms linear;
+}
+.main-navbar .upper-nav .navbar-brand {
+  font-family: "Abril Fatface", cursive;
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: #f5f3f3;
+}
+.main-navbar .upper-nav .navbar-toggler {
+  display: none;
+}
+.main-navbar .upper-nav .navbar-search {
+  font-size: 1.25rem;
+}
+.main-navbar .upper-nav .navbar-search a {
+  color: grey;
+  transition: color 200ms linear;
+}
+.main-navbar .upper-nav .navbar-search a:hover {
+  color: #f5f3f3;
+  transition: color 200ms linear;
+}
+.main-navbar .upper-nav .navbar-search span {
+  font-size: 0.75rem;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.main-navbar .under-nav {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(170, 170, 170, 0.1);
+}
+.main-navbar .under-nav .nav-collapsed__title {
+  display: none;
+}
+.main-navbar .under-nav .dropdown-menu {
+  position: absolute;
+  z-index: -100;
+  background-color: transparent;
+  box-shadow: none;
+  margin-top: 3em;
+  margin-left: 1em;
+  padding: 0.75em 0;
+  font-size: 0.95rem;
+  border-radius: 2.5px;
+  transition: all 200ms linear, z-index 1ms;
+}
+.main-navbar .under-nav .dropdown-menu .dropdown-item {
+  padding: 0.5em 0.5rem;
+}
+.main-navbar .under-nav .dropdown-menu .dropdown_a {
+  padding: 0 2em;
+  color: transparent;
+}
+.main-navbar .under-nav .dropdown-menu .dropdown_a:hover {
+  color: transparent;
+}
+.main-navbar .under-nav .navbar-links {
+  display: flex;
+  align-items: center;
+}
+.main-navbar .under-nav .navbar-links a {
+  color: #aaaaaa;
+}
+.main-navbar .under-nav .navbar-links .navbar-link {
+  padding: 1.5em 0;
+}
+.main-navbar .under-nav .navbar-links .navbar-link .navbar-link__a {
+  padding: 1.5em 2em;
+  transition: color 200ms linear;
+}
+.main-navbar .under-nav .navbar-links .navbar-link .navbar-link__a:hover {
+  color: #f5f3f3;
+  transition: color 200ms linear;
+}
+.main-navbar .under-nav .navbar-links .navbar-link .navbar-link__rotate i {
+  transform: rotate(180deg);
+  transition: transform 200ms linear;
+}
+.main-navbar .under-nav .navbar-links .dropdown i {
+  font-size: 0.5em;
+  padding: 0.5em;
+  transition: all 200ms linear;
+}
+@media screen and (min-width: 768px) {
+  .main-navbar .under-nav .navbar-links .dropdown:hover .navbar-link__a i {
+    transform: rotate(180deg);
+    transition: transform 200ms linear;
+  }
+  .main-navbar .under-nav .navbar-links .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 1em;
+    z-index: 0;
+    background-color: #f5f3f3;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 1em;
+    padding: 0.75em 0;
+    font-size: 0.95rem;
+    border-radius: 2.5px;
+    transition: all 200ms linear, z-index 1ms;
+  }
+  .main-navbar .under-nav .navbar-links .dropdown:hover .dropdown-menu .dropdown-item {
+    padding: 0.5em 0.5rem;
+  }
+  .main-navbar .under-nav .navbar-links .dropdown:hover .dropdown-menu .dropdown_a {
+    padding: 0 2em;
+    color: rgba(26, 25, 25, 0.55);
+    transition: color 200ms linear;
+  }
+  .main-navbar .under-nav .navbar-links .dropdown:hover .dropdown-menu .dropdown_a:hover {
+    color: #1a1919;
+    transition: color 200ms linear;
+  }
+  .main-navbar .under-nav .navbar-links .dropdown:hover .dropdown-menu .dropdown_a:hover i {
+    transform: rotate(180deg);
+    transition: transform 200ms linear;
+  }
+}
+
+.close-overlay {
+  cursor: pointer;
+}
+
+.search-overlay {
+  padding: 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #f5f3f3;
+  background-color: #1a1919;
+  opacity: 100%;
+  transition: opacity 200ms linear;
+}
+.search-overlay .close-overlay {
+  font-size: 1.25rem;
+}
+.search-overlay .inner-search .search__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+.search-overlay .inner-search .search__form .search-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+.search-overlay .inner-search .search__form input {
+  font-size: 2.5rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  outline: none;
+  color: #f5f3f3;
+}
+.search-overlay .inner-search .search__form ::placeholder {
+  color: #aaaaaa;
+}
+.search-overlay .inner-search .search-hint {
+  font-size: 1rem;
+  padding: 2em;
+  color: #aaaaaa;
+}
+
+.inner-search {
+  margin-bottom: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .main-navbar .upper-nav {
+    flex-direction: row-reverse;
+  }
+  .main-navbar .upper-nav .navbar-toggler {
+    cursor: pointer;
+    display: inline-block;
+    color: #aaaaaa;
+    font-size: 1.25rem;
+    transition: color 200ms linear;
+  }
+  .main-navbar .upper-nav .navbar-toggler:hover {
+    color: #f5f3f3;
+    transition: color 200ms linear;
+  }
+  .main-navbar .upper-nav .navbar-social {
+    display: none;
+  }
+  .main-navbar .upper-nav .navbar-search span {
+    display: none;
+  }
+  .main-navbar .under-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1a1919;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 200ms linear;
+  }
+  .main-navbar .under-nav .navbar-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2rem;
+    background-color: #1a1919;
+  }
+  .main-navbar .under-nav .navbar-links .dropdown-menu {
+    position: static;
+    margin: 0;
+    padding: 1rem 2rem;
+  }
+  .main-navbar .under-nav .navbar-links .dropdown-menu .dropdown-item {
+    padding: 0.5rem 1rem;
+    margin: 0;
+  }
+  .main-navbar .under-nav .navbar-links .dropdown-menu .dropdown-item .dropdown_a {
+    font-size: 0.85rem;
+    padding: 0;
+    margin: 0;
+    color: #aaaaaa;
+  }
+  .main-navbar .under-nav .navbar-links .dropdown-menu .dropdown-item .dropdown_a:hover {
+    color: #f5f3f3;
+  }
+  .main-navbar .under-nav .navbar-links .hide-dropdown-menu {
+    position: absolute;
+    z-index: -1;
+    background-color: #1a1919;
+    opacity: 0;
+    transition: opacity 100ms linear;
+  }
+  .main-navbar .under-nav .navbar-links .nav-collapsed__title {
+    display: block;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    padding: 4em;
+    font-size: 0.75rem;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.1);
+  }
+  .main-navbar .under-nav .navbar-links .nav-collapsed__title i {
+    cursor: pointer;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .main-navbar .under-nav .navbar-links .navbar-link {
+    width: 100%;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.1);
+  }
+
+  .hide-overlay-nav {
+    z-index: -1;
+    background-color: #1a1919;
+    opacity: 0;
+    transition: opacity 200ms linear;
+  }
+}
+.hide-overlay {
+  z-index: -1;
+  background-color: #1a1919;
+  opacity: 0;
+  transition: opacity 200ms linear;
+}
+
+.hero-section {
+  background-color: lightblue;
+  width: 100vw;
+  height: 75vh;
+}
+
+/*# sourceMappingURL=style.css.map */
