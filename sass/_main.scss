@@ -1,42 +1,72 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
 }
 
 body {
-    font-family: $main-font;
-    background-color: $light;
-
-
+  font-family: $main-font;
+  background-color: $light;
+  margin: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+  line-height: 1.2;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: $title-font;
-    font-weight: 400;
-    letter-spacing: 2px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  font-weight: 400;
+  // letter-spacing: 2px;
 }
 
-h1 { font-size: 3rem;}
-h2 { font-size: 2.8rem;}
-h3 { font-size: 2.5rem;}
-h4 { font-size: 2rem;}
-h5 { font-size: 1.8rem;}
-h6 { font-size: 1.5rem;}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.8rem;
+}
+h6 {
+  font-size: 1.5rem;
+}
 
-p { font-size: 1.25rem; }
-
+p {
+  font-size: 1.2rem;
+}
 
 li {
-    list-style: none;
+  list-style: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-
 .container {
-    max-width: map-get($breakpoints, xl);
-    margin: auto;
-    padding: 0 2rem;
+  max-width: map-get($breakpoints, xl);
+  margin: auto;
+  padding: 0 2rem;
 }

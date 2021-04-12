@@ -1,19 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&display=swap");
-* {
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 1rem;
+}
+
 body {
   font-family: "Lato", sans-serif;
   background-color: #f5f3f3;
+  margin: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+  line-height: 1.2;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Abril Fatface", serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
   font-weight: 400;
-  letter-spacing: 2px;
 }
 
 h1 {
@@ -41,7 +61,7 @@ h6 {
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 li {
@@ -60,6 +80,7 @@ a {
 
 .navbar {
   background-color: #1a1919;
+  width: 100vw;
 }
 
 .main-navbar {
@@ -318,6 +339,18 @@ a {
   outline: none;
   color: #f5f3f3;
 }
+.search-overlay .inner-search .search__form ::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.search-overlay .inner-search .search__form ::-moz-placeholder {
+  color: #aaaaaa;
+}
+.search-overlay .inner-search .search__form :-ms-input-placeholder {
+  color: #aaaaaa;
+}
+.search-overlay .inner-search .search__form ::-ms-input-placeholder {
+  color: #aaaaaa;
+}
 .search-overlay .inner-search .search__form ::placeholder {
   color: #aaaaaa;
 }
@@ -407,8 +440,10 @@ a {
     width: 100%;
     text-align: center;
     padding: 4em;
-    font-size: 0.75rem;
     border-bottom: 1px solid rgba(170, 170, 170, 0.1);
+  }
+  .main-navbar .under-nav .navbar-links .nav-collapsed__title .nav-collapsed__heading {
+    font-size: 1rem;
   }
   .main-navbar .under-nav .navbar-links .nav-collapsed__title i {
     cursor: pointer;
@@ -434,12 +469,6 @@ a {
   .main-navbar .upper-nav .navbar-brand {
     font-size: 2rem;
   }
-  .main-navbar .upper-nav .navbar-search a {
-    color: white;
-  }
-  .main-navbar .upper-nav .navbar-toggler {
-    color: white;
-  }
 }
 .hide-overlay {
   z-index: -1;
@@ -451,8 +480,8 @@ a {
 .hero-section {
   background-color: #1a1919;
   width: 100vw;
-  height: 100vh;
-  min-height: 100vh;
+  height: 75vh;
+  color: #f5f3f3;
 }
 .hero-section .hero-articles {
   display: grid;
@@ -460,6 +489,33 @@ a {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "first first second second" "first first third third";
+}
+.hero-section .hero-articles .article {
+  padding: 2rem;
+}
+.hero-section .hero-articles .article .article-category {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.5em;
+  background-color: #f5f3f3;
+  color: #1a1919;
+  letter-spacing: 0.1em;
+}
+.hero-section .hero-articles .article .article-title {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.hero-section .hero-articles .article .article-info {
+  display: flex;
+  flex-direction: row;
+}
+.hero-section .hero-articles .article .article-info a {
+  color: #aaaaaa;
+  transition: color 200ms linear;
+}
+.hero-section .hero-articles .article .article-info a:hover {
+  color: #f5f3f3;
+  transition: color 200ms linear;
 }
 .hero-section .hero-articles .first-article {
   background-color: brown;
@@ -478,10 +534,13 @@ a {
 }
 
 @media screen and (max-width: 992px) {
+  .hero-section {
+    height: 100vh;
+  }
   .hero-section .hero-articles {
     height: 100%;
-    grid-template-areas: "first first first first " "second second third third";
-    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "first first first first" "first first first first" "second second third third";
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
 @media screen and (max-width: 768px) {
@@ -489,6 +548,9 @@ a {
     height: 100%;
     grid-template-areas: "first first first first" "second second second second";
     grid-template-rows: 1fr 1fr;
+  }
+  .hero-section .hero-articles .third-article {
+    display: none;
   }
 }
 

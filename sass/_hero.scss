@@ -1,63 +1,98 @@
 .hero-section {
-    background-color: $dark;
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
+  background-color: $dark;
+  width: 100vw;
+  height: 75vh;
+  color: $light;
 
-    .hero-articles {
-        display: grid;
-        height: 100%;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-            "first first second second"
-            "first first third third";
+  .hero-articles {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "first first second second"
+      "first first third third";
 
-        .first-article {
-            background-color: brown;
-            height: 100%;
-            grid-area: first;
+    .article {
+      padding: 2rem;
+
+      .article-category {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        padding: 0.5em;
+        background-color: $light;
+        color: $dark;
+        letter-spacing: 0.1em;
+      }
+      .article-title {
+        font-size: 2rem;
+        padding: 1rem 0;
+      }
+
+      .article-info {
+        display: flex;
+        flex-direction: row;
+        a {
+          color: $grey;
+          transition: $color-transition;
+          &:hover {
+            color: $light;
+            transition: $color-transition;
+          }
         }
-
-        .second-article {
-            background-color: blue;
-            height: 100%;
-            grid-area: second;
-        }
-
-        .third-article {
-            background-color: green;
-            height: 100%;
-            grid-area: third;
-        }
+      }
 
     }
+
+    .first-article {
+      background-color: brown;
+      height: 100%;
+      grid-area: first;
+    }
+
+    .second-article {
+      background-color: blue;
+      height: 100%;
+      grid-area: second;
+    }
+
+    .third-article {
+      background-color: green;
+      height: 100%;
+      grid-area: third;
+    }
+  }
 }
 
-
 @media screen and (max-width: map-get($breakpoints, lg)) {
-    .hero-section {
-
-    
-        .hero-articles {
-            height: 100%;
-            grid-template-areas:
-                "first first first first "
-                "second second third third";
-                grid-template-rows: 1fr 1fr;
-        }
+  .hero-section {
+    height: 100vh;
+    .hero-articles {
+      height: 100%;
+      grid-template-areas:
+        "first first first first"
+        "first first first first"
+        "second second third third";
+      grid-template-rows: 1fr 1fr 1fr;
     }
+  }
 }
 
 @media screen and (max-width: map-get($breakpoints, md)) {
-    .hero-section {
+  .hero-section {
     
-        .hero-articles {
-            height: 100%;
-            grid-template-areas:
-                "first first first first"
-                "second second second second";
-                grid-template-rows: 1fr 1fr;
-        }
+    .hero-articles {
+      height: 100%;
+      grid-template-areas:
+        "first first first first"
+        "second second second second";
+      grid-template-rows: 1fr 1fr;
+
+      .third-article {
+        display: none;
+      }
+
+
     }
+  }
 }

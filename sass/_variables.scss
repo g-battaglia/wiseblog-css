@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 // font-family: 'Abril Fatface', cursive;
 // font-family: 'Lato', sans-serif;
 
@@ -10,13 +11,17 @@ $highlight: #6eaccc;
 $highlightDark: #8291b7;
 $grey: #aaaaaa;
 
-
 // Others:
-$title-font: 'Abril Fatface', serif;
-$main-font: 'Lato', sans-serif;
+$title-font: "Abril Fatface", serif;
+$main-font: "Lato", sans-serif;
+$heading-font: "Merriweather", serif;
 
 $radius: 2.5px;
-$box-shadow: 1px 3px 10px rgba($color: #000000, $alpha: 0.2);
+$box-shadow: 1px 3px 10px
+  rgba(
+    $color: #000000,
+    $alpha: 0.2,
+  );
 
 $breakpoints: (
   xs: 0,
@@ -24,5 +29,7 @@ $breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
 );
+
+$color-transition: color 200ms linear;
