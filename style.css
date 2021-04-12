@@ -293,7 +293,7 @@ a {
 
 .search-overlay {
   padding: 2em;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
