@@ -69,14 +69,15 @@
             } 
 
             .navbar-user {
-                padding: 1em;
-            
-                padding-right: 0em;
+                
+                margin-left: 1em;
                 .navbar-user__icon {
-                    margin-left: 1em;
+                    padding: 0 1em 1em 1em;
                     color: $grey;
+                    transition: color 200ms linear;
                     &:hover {
                         color: $light;
+                        transition: color 200ms linear;
                     }
                 }
                 // HERE!
@@ -86,14 +87,12 @@
                     background-color: transparent;
                     box-shadow: none;
                     margin-top: 3em;
-                    margin-left: -3em;
+                    margin-left: -1.5em;
                     padding: 0.75em 0;
                     font-size: 0.95rem;
                     border-radius: $radius;
 
-                    a {
-                        color: rgba($dark, .55);
-                    }
+
                 }
 
                 @media screen and (min-width: map-get($breakpoints, md)) {
@@ -118,8 +117,10 @@
 
                                 a {
                                     color: rgba($dark, .55);
+                                    transition: color 200ms linear;
                                     &:hover {
                                         color: $dark;
+                                        transition: color 200ms linear;
                                     }
                                 }
                                 
@@ -168,8 +169,10 @@
             .dropdown_a {
                 padding: 0 2em;
                 color: transparent;
+                transition: color 200ms linear;
                 &:hover {
                     color: transparent;
+                    transition: color 200ms linear;
                 }
 
             }
@@ -298,6 +301,7 @@
     background-color: $dark;
     opacity: 100%;
     transition: opacity 200ms linear;
+    
     .close-overlay {
         font-size: 1.25rem;
     }
