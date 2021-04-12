@@ -40,20 +40,21 @@ toggler(".navbar-toggler",
 
 
 function hideDropdownMenu(togleClass, iconClass, animatedClassName, menuClass, menuHide) {
-    const t = document.querySelector(togleClass)
-    const i = document.querySelector(iconClass)
-    const mc = document.querySelector(menuClass)
+    const t = document.querySelectorAll(togleClass) 
+    const i = document.querySelectorAll(iconClass)
+    const mc = document.querySelectorAll(menuClass)
     const mh  =  menuHide
-
     const animateClassName = animatedClassName
 
-    t.addEventListener("click", function() {
-        i.classList.toggle("navbar-link__rotate");
-    })
+    for (const [ind, val] of t.entries()) {
+        val.addEventListener("click", function() {
+            i[ind].classList.toggle("navbar-link__rotate");
+        })
 
-    t.addEventListener("click", function() {
-        mc.classList.toggle(mh);
-    })
+        val.addEventListener("click", function() {
+            mc[ind].classList.toggle(mh);
+        })
+    }
 }
 
 hideDropdownMenu(".dropdown-toggler",
