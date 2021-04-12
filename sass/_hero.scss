@@ -1,5 +1,63 @@
 .hero-section {
-    background-color: lightblue;
+    background-color: $dark;
     width: 100vw;
-    height: 75vh;
+    height: 100vh;
+    min-height: 100vh;
+
+    .hero-articles {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "first first second second"
+            "first first third third";
+
+        .first-article {
+            background-color: brown;
+            height: 100%;
+            grid-area: first;
+        }
+
+        .second-article {
+            background-color: blue;
+            height: 100%;
+            grid-area: second;
+        }
+
+        .third-article {
+            background-color: green;
+            height: 100%;
+            grid-area: third;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: map-get($breakpoints, lg)) {
+    .hero-section {
+
+    
+        .hero-articles {
+            height: 100%;
+            grid-template-areas:
+                "first first first first "
+                "second second third third";
+                grid-template-rows: 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+    .hero-section {
+    
+        .hero-articles {
+            height: 100%;
+            grid-template-areas:
+                "first first first first"
+                "second second second second";
+                grid-template-rows: 1fr 1fr;
+        }
+    }
 }
