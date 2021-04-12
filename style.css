@@ -54,7 +54,7 @@ a {
   transition: color 200ms linear;
 }
 .main-navbar .upper-nav .navbar-brand {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Abril Fatface", serif;
   font-weight: 400;
   font-size: 3rem;
   letter-spacing: 2px;
@@ -217,6 +217,7 @@ a {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid gray;
+  border-radius: 0;
   width: 100%;
   outline: none;
   color: #f5f3f3;
