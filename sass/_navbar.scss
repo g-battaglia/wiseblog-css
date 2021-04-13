@@ -464,6 +464,13 @@
 @media screen and (max-width: map-get($breakpoints, md)) {
   .main-navbar {
     .upper-nav {
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      left: 0;
+      padding: 0 2rem;
+      width: 100vw;
+      background-color: $dark;
       .navbar-brand {
         font-size: 2rem;
         padding: 0.5em 0;
