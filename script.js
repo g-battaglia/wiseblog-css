@@ -16,14 +16,17 @@ function toggler(openIconClass, overlayClass, closeIconClass, hideClassJustName)
     const search = document.querySelector(openIconClass)
     const searchOverlay = document.querySelector(overlayClass)
     const closeOverlay = document.querySelector(closeIconClass)
-
     search.addEventListener("click", function() {
+        searchOverlay.style.height = document.documentElement.scrollHeight + "px";
         searchOverlay.classList.toggle(hideClassJustName);
     })
 
     closeOverlay.addEventListener("click", function() {
+        searchOverlay.style.height = "auto"
         searchOverlay.classList.toggle(hideClassJustName);
-})}
+        }
+    )
+}
 
 toggler(".navbar-search",
         ".search-overlay",
@@ -63,3 +66,15 @@ hideDropdownMenu(".dropdown-toggler",
                ".dropdown-menu",
                "hide-dropdown-menu"
 )
+
+// Resize fix:
+
+window.addEventListener('resize', function() {
+    const navBar = document.querySelector(".under-nav")
+    h = document.documentElement.scrollWidth;
+    console.log(h);
+    if (h > 768) {
+        navBar.style.height = "auto"
+    }
+    
+});

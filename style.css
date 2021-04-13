@@ -310,6 +310,7 @@ a {
 }
 .search-overlay .close-overlay {
   font-size: 1.25rem;
+  padding: 1em;
 }
 .search-overlay .inner-search .search__form {
   display: flex;
@@ -395,6 +396,7 @@ a {
   .main-navbar .under-nav {
     display: block;
     position: absolute;
+    z-index: 100;
     top: 0;
     left: 0;
     background-color: #1a1919;
@@ -440,7 +442,8 @@ a {
     text-transform: uppercase;
     width: 100%;
     text-align: center;
-    padding: 4em;
+    padding: 2em;
+    padding-bottom: 6em;
     border-bottom: 1px solid rgba(170, 170, 170, 0.1);
   }
   .main-navbar .under-nav .navbar-links .nav-collapsed__title .nav-collapsed__heading {
@@ -449,7 +452,7 @@ a {
   .main-navbar .under-nav .navbar-links .nav-collapsed__title i {
     cursor: pointer;
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
   }
   .main-navbar .under-nav .navbar-links .navbar-link {
     width: 100%;
@@ -458,8 +461,7 @@ a {
   .main-navbar .under-nav .navbar-links .account-collapsed {
     display: block;
   }
-
-  .hide-overlay-nav {
+  .main-navbar .hide-overlay-nav {
     z-index: -1;
     background-color: #1a1919;
     opacity: 0;
@@ -481,11 +483,16 @@ a {
 
 .hero-section {
   background-color: #1a1919;
+  position: relative;
   width: 100vw;
-  height: 75vh;
+  min-height: 75vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   color: #f5f3f3;
 }
 .hero-section .hero-articles {
+  position: relative;
   display: grid;
   padding-bottom: 2rem;
   height: 100%;
@@ -577,7 +584,10 @@ a {
 
 @media screen and (max-width: 992px) {
   .hero-section {
-    height: 100vh;
+    min-height: 100vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .hero-section .hero-articles {
     height: 100%;
@@ -586,6 +596,11 @@ a {
   }
 }
 @media screen and (max-width: 768px) {
+  .hero-section {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
   .hero-section .hero-articles {
     height: 100%;
     grid-template-areas: "first first first first" "second second second second";
