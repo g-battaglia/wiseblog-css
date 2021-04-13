@@ -1,16 +1,36 @@
 .extra-section {
-    height: 75vh;
-    padding-top: 4rem;
+
+    min-height: 75vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "first first second second"
+      "tags tags tags tags";
+
+    .extra-title {
+        display: inline-block;
+        padding: 2rem 0;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .extra-paragraph {
+        padding: 1em;
+    }
 
     .extra-tags {
+        grid-area: tags;
         display: flex;
         flex-direction: column;
         align-items: center;
-        .extra-tags__heading {
-            display: inline-block;
-            padding: 2rem;
 
-        }
         .tag-cloud {
             display: flex;
             justify-content: center;
