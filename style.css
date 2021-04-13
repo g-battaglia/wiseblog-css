@@ -239,10 +239,10 @@ a {
   color: #aaaaaa;
 }
 .main-navbar .under-nav .navbar-links .navbar-link {
-  padding: 1.5em 0;
+  padding: 1.25em 0;
 }
 .main-navbar .under-nav .navbar-links .navbar-link .navbar-link__a {
-  padding: 1.5em 2em;
+  padding: 1.25em 2em;
   transition: color 200ms linear;
 }
 .main-navbar .under-nav .navbar-links .navbar-link .navbar-link__a:hover {
