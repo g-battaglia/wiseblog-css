@@ -6,6 +6,7 @@
 
   .hero-articles {
     display: grid;
+    padding-bottom: 2rem;
     height: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
@@ -14,53 +15,93 @@
       "first first third third";
 
     .article {
-      padding: 2rem;
+      .backdrop-article {
+        padding: 2rem;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        background: rgba($dark, 0.55);
+        transition: background 200ms ease-in-out;
+        &:hover {
+          background: rgba($dark, 0.75);
+          transition: background .5s ease-out;
+        }
 
-      .article-category {
-        display: inline-block;
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        padding: 0.5em;
-        background-color: $light;
-        color: $dark;
-        letter-spacing: 0.1em;
-      }
-      .article-title {
-        font-size: 2rem;
-        padding: 1rem 0;
-      }
-
-      .article-info {
-        display: flex;
-        flex-direction: row;
-        a {
-          color: $grey;
-          transition: $color-transition;
-          &:hover {
-            color: $light;
-            transition: $color-transition;
+        .inner-article{
+          position: absolute;
+          bottom: 2em;
+          .article-category {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            padding: 0.5em;
+            background-color: $light;
+            color: $dark;
+            letter-spacing: 0.1em;
+            border-radius: $radius;
           }
+          .article-title {
+            font-size: 2rem;
+            padding: 1rem 0;
+          }
+    
+          .article-info {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            font-size: 0.85rem;
+            a {
+              color: $grey;
+              transition: $color-transition;
+              &:hover {
+                color: $light;
+                transition: $color-transition;
+              }
+            }
+            .article-datetime {
+              margin-left: 0.85rem;
+            }
+          }
+    
         }
       }
-
     }
 
     .first-article {
-      background-color: brown;
       height: 100%;
       grid-area: first;
+      background-color: $grey;
+      background-image: url('img/hiphop.jpeg');
+      height: 100%;
+      min-height: 200px;
+      background-size: cover;
+      background-position: 50% 80%;
+      background-repeat: no-repeat;
     }
 
     .second-article {
       background-color: blue;
       height: 100%;
       grid-area: second;
+      background-color: $grey;
+      background-image: url('img/concert.jpeg');
+      height: 100%;
+      min-height: 200px;
+      background-size: cover;
+      background-position: 50% 80%;
+      background-repeat: no-repeat;
     }
 
     .third-article {
       background-color: green;
       height: 100%;
       grid-area: third;
+      background-image: url('img/books.jpeg');
+      height: 100%;
+      min-height: 200px;
+      background-size: cover;
+      background-position: 50% 80%;
+      background-repeat: no-repeat;
     }
   }
 }
@@ -88,6 +129,7 @@
         "first first first first"
         "second second second second";
       grid-template-rows: 1fr 1fr;
+      gap: 2em;
 
       .third-article {
         display: none;
