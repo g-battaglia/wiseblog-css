@@ -409,23 +409,23 @@ a {
     overflow: scroll;
     width: 100vw;
     transition: opacity 200ms linear;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     font-size: 1.25rem;
   }
   .main-navbar .under-nav .navbar-links {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 2rem;
+    padding: 0 2em;
     background-color: #1a1919;
   }
   .main-navbar .under-nav .navbar-links .dropdown-menu {
     position: static;
     margin: 0;
-    padding: 1rem 2rem;
+    padding: 1em 1em;
   }
   .main-navbar .under-nav .navbar-links .dropdown-menu .dropdown-item {
-    padding: 0.5rem 1rem;
+    padding: 0.5em 1em;
     margin: 0;
   }
   .main-navbar .under-nav .navbar-links .dropdown-menu .dropdown-item .dropdown_a {
@@ -465,6 +465,9 @@ a {
   .main-navbar .under-nav .navbar-links .navbar-link {
     width: 100%;
     border-bottom: 1px solid rgba(170, 170, 170, 0.1);
+  }
+  .main-navbar .under-nav .navbar-links .navbar-link .navbar-link__a {
+    padding: 0;
   }
   .main-navbar .under-nav .navbar-links .account-collapsed {
     display: block;

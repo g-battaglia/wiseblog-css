@@ -385,22 +385,22 @@
       overflow: scroll;
       width: 100vw;
       transition: opacity 200ms linear;
-      padding-bottom: 2rem;
+      padding-bottom: 4rem;
       font-size: 1.25rem;
 
       .navbar-links {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding: 0 2rem;
+        padding: 0 2em;
         background-color: $dark;
 
         .dropdown-menu {
           position: static;
           margin: 0;
-          padding: 1rem 2rem;
+          padding: 1em 1em;
           .dropdown-item {
-            padding: 0.5rem 1rem;
+            padding: 0.5em 1em;
             margin: 0;
             .dropdown_a {
               font-size: 1em;
@@ -447,6 +447,9 @@
         .navbar-link {
           width: 100%;
           border-bottom: 1px solid rgba($grey, 0.1);
+          .navbar-link__a {
+            padding: 0;
+          }
         }
 
         .account-collapsed {
