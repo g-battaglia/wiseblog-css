@@ -16,7 +16,6 @@
 
     .article {
       .backdrop-article {
-        padding: 2rem;
         height: 100%;
         position: relative;
         z-index: 1;
@@ -29,7 +28,8 @@
 
         .inner-article{
           position: absolute;
-          bottom: 2em;
+          bottom: 0;
+          margin: 2em;
           .article-category {
             display: inline-block;
             text-transform: uppercase;
@@ -41,7 +41,7 @@
             border-radius: $radius;
           }
           .article-title {
-            font-size: 2rem;
+            font-size: 1.8rem;
             padding: 1rem 0;
           }
     

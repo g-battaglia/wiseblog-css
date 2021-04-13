@@ -493,7 +493,6 @@ a {
   grid-template-areas: "first first second second" "first first third third";
 }
 .hero-section .hero-articles .article .backdrop-article {
-  padding: 2rem;
   height: 100%;
   position: relative;
   z-index: 1;
@@ -506,7 +505,8 @@ a {
 }
 .hero-section .hero-articles .article .backdrop-article .inner-article {
   position: absolute;
-  bottom: 2em;
+  bottom: 0;
+  margin: 2em;
 }
 .hero-section .hero-articles .article .backdrop-article .inner-article .article-category {
   display: inline-block;
@@ -519,7 +519,7 @@ a {
   border-radius: 2.5px;
 }
 .hero-section .hero-articles .article .backdrop-article .inner-article .article-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding: 1rem 0;
 }
 .hero-section .hero-articles .article .backdrop-article .inner-article .article-info {
