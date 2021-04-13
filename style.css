@@ -486,7 +486,6 @@ a {
   }
   .main-navbar .upper-nav .navbar-toggler {
     font-size: 1.5rem;
-    color: #f5f3f3;
   }
   .main-navbar .upper-nav .navbar-brand {
     font-size: 2rem;
@@ -494,7 +493,6 @@ a {
   }
   .main-navbar .upper-nav .navbar-utilities .navbar-search a {
     font-size: 1.5rem;
-    color: #f5f3f3;
   }
 }
 .hide-overlay {
