@@ -385,23 +385,37 @@ a {
 @media screen and (max-width: 768px) {
   .main-navbar .upper-nav {
     flex-direction: row-reverse;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    padding: 0 2rem;
+    width: 100vw;
+    background-color: #1a1919;
   }
   .main-navbar .upper-nav .navbar-toggler {
     cursor: pointer;
     display: inline-block;
     color: #aaaaaa;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     transition: color 200ms linear;
   }
   .main-navbar .upper-nav .navbar-toggler:hover {
     color: #f5f3f3;
     transition: color 200ms linear;
   }
+  .main-navbar .upper-nav .navbar-brand {
+    font-size: 2rem;
+    padding: 0.5em 0;
+  }
   .main-navbar .upper-nav .navbar-social {
     display: none;
   }
   .main-navbar .upper-nav .navbar-search span {
     display: none;
+  }
+  .main-navbar .upper-nav .navbar-search a {
+    font-size: 1.5rem;
   }
   .main-navbar .upper-nav .navbar-user {
     display: none;
@@ -485,27 +499,6 @@ a {
     background-color: #1a1919;
     opacity: 0;
     transition: opacity 200ms linear;
-  }
-}
-@media screen and (max-width: 768px) {
-  .main-navbar .upper-nav {
-    position: fixed;
-    z-index: 50;
-    top: 0;
-    left: 0;
-    padding: 0 2rem;
-    width: 100vw;
-    background-color: #1a1919;
-  }
-  .main-navbar .upper-nav .navbar-toggler {
-    font-size: 1.5rem;
-  }
-  .main-navbar .upper-nav .navbar-brand {
-    font-size: 2rem;
-    padding: 0.5em 0;
-  }
-  .main-navbar .upper-nav .navbar-utilities .navbar-search a {
-    font-size: 1.5rem;
   }
 }
 .hide-overlay {
@@ -684,12 +677,11 @@ a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "first first second second" "tags tags tags tags";
+  grid-template-areas: "posts posts posts about about" "tags tags tags tags tags";
 }
 .extra-section .extra-title {
   display: inline-block;
@@ -697,8 +689,28 @@ a {
   display: flex;
   justify-content: center;
 }
-.extra-section .extra-paragraph {
-  padding: 1em;
+.extra-section .extra-about {
+  max-width: 60ch;
+  margin-bottom: 2em;
+  grid-area: about;
+}
+.extra-section .extra-about .extra-paragraph {
+  text-justify: auto;
+}
+.extra-section .extra-about .extra-social-links {
+  display: flex;
+  font-size: 1.5rem;
+  padding: 1em 0;
+}
+.extra-section .extra-about .extra-social-links li {
+  padding-right: 0.5em;
+}
+.extra-section .extra-about .extra-social-links a {
+  color: #aaaaaa;
+  transition: color 200ms linear;
+}
+.extra-section .extra-about .extra-social-links a:hover {
+  color: #1a1919;
 }
 .extra-section .extra-tags {
   grid-area: tags;
@@ -727,6 +739,22 @@ a {
 .extra-section .extra-tags .tag-cloud .tag-cloud__item a {
   color: #fff;
   padding: 0.5em;
+}
+
+@media screen and (max-width: 992px) {
+  .extra-section {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "posts posts about about" "tags tags tags tags";
+  }
+}
+@media screen and (max-width: 768px) {
+  .extra-section {
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "posts" "about" "tags";
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

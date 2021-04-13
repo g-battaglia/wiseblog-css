@@ -347,17 +347,29 @@
   .main-navbar {
     .upper-nav {
       flex-direction: row-reverse;
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      left: 0;
+      padding: 0 2rem;
+      width: 100vw;
+      background-color: $dark;
 
       .navbar-toggler {
         cursor: pointer;
         display: inline-block;
         color: $grey;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         transition: color 200ms linear;
         &:hover {
           color: $light;
           transition: color 200ms linear;
         }
+      }
+
+      .navbar-brand {
+        font-size: 2rem;
+        padding: 0.5em 0;
       }
 
       .navbar-social {
@@ -367,6 +379,11 @@
       .navbar-search {
         span {
           display: none;
+        }
+
+        a {
+          font-size: 1.5rem;
+          // color: $light;
         }
       }
 
@@ -463,44 +480,6 @@
       background-color: $dark;
       opacity: 0;
       transition: opacity 200ms linear;
-    }
-  }
-}
-
-@media screen and (max-width: map-get($breakpoints, md)) {
-  .main-navbar {
-    .upper-nav {
-      position: fixed;
-      z-index: 50;
-      top: 0;
-      left: 0;
-      padding: 0 2rem;
-      width: 100vw;
-      background-color: $dark;
-      
-      .navbar-toggler {
-        font-size: 1.5rem;
-        // color: $light;
-      }
-
-      .navbar-brand {
-        font-size: 2rem;
-        padding: 0.5em 0;
-      }
-
-      .navbar-utilities {
-
-        .navbar-search {
-          a {
-            font-size: 1.5rem;
-            // color: $light;
-          }
-        }
-      }
-
-    }
-    .under-nav {
-
     }
   }
 }

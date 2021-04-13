@@ -4,14 +4,13 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-      "first first second second"
-      "tags tags tags tags";
+      "posts posts posts about about"
+      "tags tags tags tags tags";
 
     .extra-title {
         display: inline-block;
@@ -21,8 +20,31 @@
 
     }
 
-    .extra-paragraph {
-        padding: 1em;
+
+
+    .extra-about {
+        max-width: 60ch;
+        margin-bottom: 2em;
+        grid-area: about;
+        
+        .extra-paragraph {
+            text-justify: auto;
+        }
+        .extra-social-links {
+            display: flex;
+            font-size: 1.5rem;
+            padding: 1em 0;
+            li {
+                padding-right:0.5em;
+            }
+            a {
+                color: $grey;
+                transition: $color-transition;
+                &:hover {
+                    color: $dark;
+                }
+            }
+        }
     }
 
     .extra-tags {
@@ -53,5 +75,27 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, lg)) {
+    .extra-section {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "posts posts about about"
+        "tags tags tags tags";
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+    .extra-section {
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "posts"
+        "about"
+        "tags";
     }
 }
