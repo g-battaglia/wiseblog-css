@@ -642,9 +642,9 @@ a {
     padding-top: 5em;
   }
   .hero-section .hero-articles {
-    height: 100%;
+    height: 100vh;
     grid-template-areas: "first" "second";
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     gap: 2em;
   }
