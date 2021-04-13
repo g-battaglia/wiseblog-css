@@ -409,6 +409,7 @@ a {
     overflow: scroll;
     width: 100vw;
     transition: opacity 200ms linear;
+    padding-bottom: 2rem;
   }
   .main-navbar .under-nav .navbar-links {
     flex-direction: column;
