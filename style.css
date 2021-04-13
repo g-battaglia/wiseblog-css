@@ -249,7 +249,7 @@ a {
   padding: 0.5em;
   transition: all 200ms linear;
 }
-@media screen and (min-width: ) {
+@media screen and (min-width: 769px) {
   .main-navbar .under-nav .navbar-links .dropdown:hover .navbar-link__a i {
     transform: rotate(180deg);
     transition: transform 200ms linear;

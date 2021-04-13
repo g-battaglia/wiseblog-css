@@ -200,7 +200,7 @@
         }
 
         // https://stackoverflow.com/questions/31433000/how-do-i-disable-css-hover-in-a-media-query
-        @media screen and (min-width: map-get($breakpoints, 769)) {
+        @media screen and (min-width: map-get($breakpoints, md) + 1) {
           &:hover {
             .navbar-link__a {
               i {
