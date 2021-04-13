@@ -17,12 +17,15 @@ function toggler(openIconClass, overlayClass, closeIconClass, hideClassJustName)
     const searchOverlay = document.querySelector(overlayClass)
     const closeOverlay = document.querySelector(closeIconClass)
     search.addEventListener("click", function() {
-        searchOverlay.style.height = document.documentElement.scrollHeight + "px";
+        // searchOverlay.style.height = document.documentElement.scrollHeight + "px";
+        // document.body.style.overflow = 'hidden';
+        document.body.classList.add('overflow-hiden')
         searchOverlay.classList.toggle(hideClassJustName);
     })
 
     closeOverlay.addEventListener("click", function() {
         searchOverlay.style.height = "auto"
+        document.body.classList.remove('overflow-hiden')
         searchOverlay.classList.toggle(hideClassJustName);
         }
     )
@@ -69,12 +72,32 @@ hideDropdownMenu(".dropdown-toggler",
 
 // Resize fix:
 
+// window.addEventListener('resize', function() {
+//     // const navBar = document.querySelector(".under-nav")
+//     // h = document.documentElement.scrollWidth;
+//     console.log(h);
+//     if (h > 768) {
+//         // navBar.style.height = "auto"
+//         // document.body.style.overflow = 'visible';
+//     }
+    
+// });
+
+
+// window.addEventListener('resize', function() {
+//     h = document.documentElement.scrollWidth;
+//     console.log(h);
+//     if ((document.body.classList.contains('overflow-hiden')) && (h > 768)) {
+//         document.body.classList.toggle('overflow-hiden');
+//     }
+    
+// });
+
 window.addEventListener('resize', function() {
-    const navBar = document.querySelector(".under-nav")
     h = document.documentElement.scrollWidth;
     console.log(h);
-    if (h > 768) {
-        navBar.style.height = "auto"
+    if (document.body.classList.contains('overflow-hiden')) {
+        document.body.classList.remove('overflow-hiden');
     }
     
 });

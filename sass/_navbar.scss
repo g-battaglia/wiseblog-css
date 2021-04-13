@@ -256,12 +256,12 @@
 
 .search-overlay {
   padding: 2em;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100vh !important; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -376,12 +376,13 @@
     }
     .under-nav {
       display: block;
-      position: absolute;
+      position: fixed;
       z-index: 100;
       top: 0;
       left: 0;
       background-color: $dark;
-      height: 100vh;
+      height: 100vh !important;
+      overflow: scroll;
       width: 100vw;
       transition: opacity 200ms linear;
 

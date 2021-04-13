@@ -78,6 +78,10 @@ a {
   padding: 0 2rem;
 }
 
+.overflow-hiden {
+  overflow: hidden;
+}
+
 .navbar {
   background-color: #1a1919;
   width: 100vw;
@@ -294,12 +298,12 @@ a {
 
 .search-overlay {
   padding: 2em;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100vh !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -396,12 +400,13 @@ a {
   }
   .main-navbar .under-nav {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
     background-color: #1a1919;
-    height: 100vh;
+    height: 100vh !important;
+    overflow: scroll;
     width: 100vw;
     transition: opacity 200ms linear;
   }
@@ -642,7 +647,7 @@ a {
     padding-top: 5em;
   }
   .hero-section .hero-articles {
-    height: 100vh;
+    height: 85vh;
     grid-template-areas: "first" "second";
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
@@ -657,6 +662,7 @@ a {
 }
 .extra-section {
   height: 75vh;
+  padding-top: 4rem;
 }
 .extra-section .extra-tags {
   display: flex;
@@ -671,6 +677,7 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0 -0.5em;
 }
 .extra-section .extra-tags .tag-cloud .tag-cloud__item {
   padding: 0.5em;
