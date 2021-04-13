@@ -1,0 +1,35 @@
+.extra-section {
+    height: 75vh;
+
+    .extra-tags {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .extra-tags__heading {
+            display: inline-block;
+            padding: 2rem;
+
+        }
+        .tag-cloud {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .tag-cloud__item {
+                padding: 0.5em;
+                margin: 0.5em;
+                color: $dark;
+                box-shadow: $box-shadow;
+                border-radius: $radius;
+                background-color: $grey;
+                transition: background 200ms ease-in-out;
+                &:hover {
+                    background-color: $dark;
+                }
+                a {
+                    color: $white;
+                    padding: 0.5em
+                }
+            }
+        }
+    }
+}
