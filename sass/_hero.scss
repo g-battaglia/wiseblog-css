@@ -84,11 +84,10 @@
 
     .first-article {
       height: 100%;
+      min-height: 200px;
       grid-area: first;
       background-color: $grey;
       background-image: url('img/hiphop.jpeg');
-      height: 100%;
-      min-height: 200px;
       background-size: cover;
       background-position: 50% 80%;
       background-repeat: no-repeat;
