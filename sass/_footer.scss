@@ -1,5 +1,86 @@
 .footer {
     background-color: $dark;
-    height: 50vh;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
     color: $light;
+    padding: 2em 0;
+    a {
+        color: $grey;
+        &:hover {
+            color: $light;
+        }
+
+    }
+    .inner-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .footer-top {
+            display: flex;
+            justify-content: center;
+            .footer-links {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                .links-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0 4em;
+                    
+                    .links-container__title {
+                        text-transform: uppercase;
+                        padding: 2em 1em;
+                        margin: 1em;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        border-bottom:1px solid $grey;
+                        text-align: center;
+                        color: $grey;
+                        width: 100%;
+                        white-space: nowrap
+                    }
+                    .links-container__list {
+                        padding: 1em 0;
+                        font-weight: 250;
+                        line-height: 1.5;
+                    }
+
+                }
+            }
+        }
+
+        .footer-foot {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4em;
+            .footer-policy {
+                padding: 1em;
+                text-align: center;
+                
+            }
+            .footer-copy {
+                padding:1em;
+                display: flex;
+                align-items: center;
+                font-size: 1rem;
+                color: $grey;
+
+             }
+
+
+        }
+    }
+
+
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+    .footer-links {
+        flex-direction: column;
+    }
 }
