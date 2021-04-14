@@ -58,6 +58,7 @@
             align-items: center;
             justify-content: center;
             margin-top: 4em;
+            white-space: nowrap;
             .footer-policy {
                 padding: 1em;
                 text-align: center;
@@ -82,5 +83,9 @@
 @media screen and (max-width: map-get($breakpoints, md)) {
     .footer-links {
         flex-direction: column;
+    }
+
+    .footer-foot {
+        flex-direction: column !important;
     }
 }
