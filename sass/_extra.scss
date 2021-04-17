@@ -36,6 +36,7 @@
                 grid-template-columns: repeat(6, 1fr);
                 grid-template-rows: repeat(3, 1fr);
                 .extra-article__img {
+                    border-radius: $radius;
                     margin-right: 1em;
                     background-color: $grey;
                     display: flex;

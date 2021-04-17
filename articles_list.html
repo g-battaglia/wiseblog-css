@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>WiseBlog Theme</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="main-navbar">
+                <div class="upper-nav">
+                    <div class="navbar-toggler"><i class="fas fa-bars"></i></div>
+                    <a class="navbar-social" href="#">
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                    <h1 class="navbar-brand">Brand</h1>
+                    <div class="navbar-utilities">
+                        <div class="navbar-search">
+                            <a href="#">
+                                <!-- <span>Search</span> -->
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                        <div class="navbar-user">
+                            <a href="#" class="navbar-user__icon">
+                                <i class="far fa-user"></i>
+                            </a>
+                            <ul class="navbar-user__list">
+                                <li class="user-link"><a href="">Account</a></li>
+                                <li class="user-link log-out"><a href="">Log out</a></li>
+                                
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="under-nav hide-overlay-nav">
+                    <ul class="navbar-links">
+                        <div class="nav-collapsed__title">
+                            <i class="fas fa-times close-nav-overlay"></i>
+                            <h6 class="nav-collapsed__heading">Site Navigation</h6>
+                            
+                        </div>
+                        <li class="navbar-link"><a class="navbar-link__a" href="#">Home</a></li>
+
+                        <li class="navbar-link dropdown">
+                            <a class="dropdown-link navbar-link__a dropdown-toggler" href="#navbarDropdown" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Categories <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu hide-dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li class="dropdown-item"><a class="dropdown_a" href="#">Music</a></li>
+                              <li class="dropdown-item"><a class="dropdown_a" href="#">Lifestyle</a></li>
+                              <li class="dropdown-item"><a class="dropdown_a" href="#">Culture</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="navbar-link"><a class="navbar-link__a" href="#">Link</a></li>
+                        <li class="navbar-link"><a class="navbar-link__a" href="#">Contact</a></li>
+                        <li class="navbar-link dropdown account-collapsed">
+                            <a class="dropdown-link navbar-link__a dropdown-toggler" href="#loginDropdwon" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Account <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu hide-dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li class="dropdown-item"><a class="dropdown_a" href="#">My acount</a></li>
+                              <li class="dropdown-item"><a class="dropdown_a" href="#">Log out</a></li>
+                            </ul>
+                        </li>
+         
+        
+
+                    </ul>
+                </div>
+        
+            </div>
+        </div>
+
+        <div class="search-overlay hide-overlay">
+            <i class="fas fa-times close-overlay"></i>
+            <div class="inner-search">
+                <form class="search__form">
+                        <span class="search-title">Search for:</span>
+                        <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                </form>
+                <small class="search-hint">Please Enter to begin your search.</small>
+            </div>
+
+        </div>
+
+    </nav>
+    <!-- End Navabr -->
+
+    <!-- Articles List Section -->
+    <section class="articles-list-section">
+        <div class="articles-list-container container">
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="listed-article">
+                <div class="listed-article__img">
+                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+                <div class="listed-article__info">
+                    <div class="entry__header">
+                        <a href="#" class="entry__date">Jenuary 20, 2021</a>
+                        <h3 class="entry__title"><a href="">Music in the next years</a></h3>
+                    </div>
+                    <div class="entry__text">
+                        <p class="entry__paragraph">
+                            Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                        </p>
+                    </div>
+                    <div class="entry__category">
+                        <a href="">Music</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Articles List Section -->
+
+    <!-- Extra Section  -->
+    <section class="extra-section container">
+        <div class="extra-popular">
+            <h4 class="extra-title">
+                Popular post
+            </h4>
+            <div class="extra-popular__articles">
+                <div class="extra-popular__div extra-popular__all">
+                    <article class="extra-popular__article">
+                        <div class="extra-article__img">
+
+                        </div>
+                        <h5 class="extra-article-title">
+                            <a href="" class="extra-article__link">
+                                Hip hop new albums
+                            </a>
+                        </h5>
+                        <ul class="extra-article-info">
+                            <li class="extra-article-author"><a href="" class="article-author__link">John Smith</a></li>
+                            <li class="extra-article-datetime">Jenuary 20, 2021</li>
+                        </ul>
+                    </article>
+
+                    <article class="extra-popular__article">
+                        <div class="extra-article__img">
+                            
+                        </div>
+                        <h5 class="extra-article-title">
+                            <a href="" class="article__link">
+                                Hip hop new albums
+                            </a>
+                        </h5>
+                        <ul class="extra-article-info">
+                            <li class="extra-article-author"><a href="" class="article-author__link">John Smith</a></li>
+                            <li class="extra-article-datetime">Jenuary 20, 2021</li>
+                        </ul>
+                    </article>
+
+                    <article class="extra-popular__article">
+                        <div class="extra-article__img">
+                            
+                        </div>
+                        <h5 class="extra-article-title">
+                            <a href="" class="article__link">
+                                Hip hop new albums
+                            </a>
+                        </h5>
+                        <ul class="extra-article-info">
+                            <li class="extra-article-author"><a href="" class="article-author__link">John Smith</a></li>
+                            <li class="extra-article-datetime">Jenuary 20, 2021</li>
+                        </ul>
+                    </article>
+
+                </div>
+                <div class="extra-popular__div extra-popular__xl">
+                    <article class="extra-popular__article">
+                        <div class="extra-article__img">
+
+                        </div>
+                        <h5 class="extra-article-title">
+                            <a href="" class="extra-article__link">
+                                Hip hop new albums
+                            </a>
+                        </h5>
+                        <ul class="extra-article-info">
+                            <li class="extra-article-author"><a href="" class="article-author__link">John Smith</a></li>
+                            <li class="extra-article-datetime">Jenuary 20, 2021</li>
+                        </ul>
+                    </article>
+
+                    <article class="extra-popular__article">
+                        <div class="extra-article__img">
+                            
+                        </div>
+                        <h5 class="extra-article-title">
+                            <a href="" class="article__link">
+                                Hip hop new albums
+                            </a>
+                        </h5>
+                        <ul class="extra-article-info">
+                            <li class="extra-article-author"><a href="" class="article-author__link">John Smith</a></li>
+                            <li class="extra-article-datetime">Jenuary 20, 2021</li>
+                        </ul>
+                    </article>
+
+                    <article class="extra-popular__article">
+                        <div class="extra-article__img">
+                            
+                        </div>
+                        <h5 class="extra-article-title">
+                            <a href="" class="article__link">
+                                Hip hop new albums
+                            </a>
+                        </h5>
+                        <ul class="extra-article-info">
+                            <li class="extra-article-author"><a href="" class="article-author__link">John Smith</a></li>
+                            <li class="extra-article-datetime">Jenuary 20, 2021</li>
+                        </ul>
+                    </article>
+
+
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <div class="extra-about">
+            <h4 class="extra-title">
+                About this blog
+            </h4>
+            <p class="extra-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu aliquet tellus. Nulla consequat orci at nisi volutpat ornare. Maecenas sed bibendum ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec laoreet est quis neque tempus, eget tempor erat ullamcorper. Nullam non dignissim eros, ac molestie dui. Integer sagittis, odio eget accumsan consequat, risus metus porttitor augue, vel rhoncus mi quam non mi. Nam et accumsan massa. Duis pretium tincidunt lacus sed ultrices. Curabitur est massa, semper dignissim nunc sed, feugiat porta ex. Donec volutpat, purus non iaculis porta, quam neque feugiat eros, in aliquet nibh turpis non erat. Pellentesque id libero vitae eros viverra pretium. Pellentesque eget euismod lacus, at porta tellus.
+            </p>
+            <ul class="extra-social-links">
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-pinterest"></i></a></li>
+            </ul>
+
+
+        </div>
+
+        <div class="extra-tags">
+            <h4 class="extra-title">
+                Tags
+            </h4>
+            <ul class="tag-cloud">
+                <li class="tag-cloud__item"> <a href="#0">Music</a></li>
+                <li class="tag-cloud__item"> <a href="#0">Lifestyle</a></li>
+                <li class="tag-cloud__item"> <a href="#0">Holidays</a></li>
+                <li class="tag-cloud__item"> <a href="#0">Tips</a></li>
+                <li class="tag-cloud__item"> <a href="#0">Party</a></li>
+                <li class="tag-cloud__item"> <a href="#0">Travel</a></li>
+                <li class="tag-cloud__item"> <a href="#0">Exercise</a></li>
+                <li class="tag-cloud__item"> <a href="#0">Books</a></li>
+                <li class="tag-cloud__item"> <a href="#0">Sport</a></li>
+                <li class="tag-cloud__item"> <a href="#0">Health</a></li>
+                <li class="tag-cloud__item"> <a href="#0">Work</a></li>
+                </ul>
+        </div>
+    </section>
+    <!-- End Extra Section -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="inner-footer container">
+            <!-- Here -->
+
+            <div class="footer-top">
+                <div class="footer-links">
+                    <div class="links-container">
+                        <h5 class="links-container__title">Quick links</h5>
+                        <ul class="links-container__list">
+                            <li class="links-container__item"><a href="" class="links-container__link">Home</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">Articles</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">About</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">Contact</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">News</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links-container">
+                        <h5 class="links-container__title">Archives</h5>
+                        <ul class="links-container__list">
+                            <li class="links-container__item"><a href="" class="links-container__link">Jenuary 20, 2021</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">Jenuary 25, 2021</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">Jenuary 30, 2021</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">December 20, 2020</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">November 20, 2020</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">October 20, 2020</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links-container">
+                        <h5 class="links-container__title">Social</h5>
+                        <ul class="links-container__list">
+                            <li class="links-container__item"><a href="" class="links-container__link">Facebook</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">Linkedin</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">Youtube</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">Instagram</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">Tumblr</a></li>
+                            <li class="links-container__item"><a href="" class="links-container__link">Pinterest</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer-newsletter">
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+            <div class="footer-foot">
+                <div class="footer-policy">
+                    <p><a class="color-light" href="">Service policy</a></p>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; Giacomo Battaglia 2021</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+</body>
+</html>
