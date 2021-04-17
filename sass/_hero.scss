@@ -175,20 +175,24 @@
 ;
 
     .hero-articles {
-      height: 85vh;
+      min-height: -webkit-fit-content;
+      min-height: -moz-fit-content;
+      min-height: fit-content;
       grid-template-areas:
         "first"
-        "second";
+        "second"
+        "third";
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr;
       gap: 2em;
 
       .article {
         border-radius: $hero-radius;
+        min-height: 35vh;
       }
 
       .third-article {
-        display: none;
+        // display: none;
       }
 
 

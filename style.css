@@ -659,17 +659,17 @@ a {
     padding-top: 5em;
   }
   .hero-section .hero-articles {
-    height: 85vh;
-    grid-template-areas: "first" "second";
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    grid-template-areas: "first" "second" "third";
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     gap: 2em;
   }
   .hero-section .hero-articles .article {
     border-radius: 10px;
-  }
-  .hero-section .hero-articles .third-article {
-    display: none;
+    min-height: 35vh;
   }
 }
 .articles-list-section {
