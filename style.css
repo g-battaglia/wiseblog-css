@@ -1013,7 +1013,7 @@ a {
 }
 .footer .inner-footer .footer-arrow {
   position: fixed;
-  right: 2.5%;
+  right: 2em;
   bottom: 2.5%;
   height: 50px;
   width: 50px;
