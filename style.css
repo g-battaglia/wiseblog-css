@@ -675,8 +675,18 @@ a {
 .articles-list-section {
   background-color: white;
 }
+.articles-list-section .articles-list__header {
+  padding: 4em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.articles-list-section .articles-list__header h2 {
+  text-align: center;
+}
 .articles-list-section .articles-list-container {
-  padding: 2em 0;
+  padding: 0;
+  padding-bottom: 4em;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -757,8 +767,8 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .articles-list-section .articles-list-container {
-    padding-top: 5em;
+  .articles-list-section .articles-list__header {
+    padding-top: 8em;
   }
 }
 .extra-section {
