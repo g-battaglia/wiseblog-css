@@ -1014,7 +1014,7 @@ a {
 .footer .inner-footer .footer-arrow {
   position: fixed;
   right: 2em;
-  bottom: 0;
+  bottom: 1em;
   height: 50px;
   width: 50px;
   display: flex;
@@ -1028,7 +1028,7 @@ a {
 }
 .footer .inner-footer .footer-arrow.active {
   opacity: 1;
-  bottom: 50px;
+  bottom: 2em;
   pointer-events: auto;
 }
 
