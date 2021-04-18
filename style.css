@@ -677,7 +677,7 @@ a {
   background-color: white;
 }
 .articles-list-section .articles-list__header {
-  padding: 4em 2em;
+  padding: 2em 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1036,12 +1036,17 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .footer-links {
+  .footer .footer-top .footer-links {
     flex-direction: column;
   }
-
-  .footer-foot {
-    flex-direction: column !important;
+  .footer .inner-footer .footer-foot {
+    flex-direction: column;
+  }
+  .footer .inner-footer .footer-foot .footer-policy {
+    padding: 0;
+  }
+  .footer .inner-footer .footer-foot .footer-copy {
+    padding: 0;
   }
 }
 

@@ -104,11 +104,25 @@
 }
 
 @media screen and (max-width: map-get($breakpoints, md)) {
-    .footer-links {
-        flex-direction: column;
-    }
 
-    .footer-foot {
-        flex-direction: column !important;
+
+.footer {
+    .footer-top {
+        .footer-links {
+            flex-direction: column;
+        }
     }
+    .inner-footer {
+        .footer-foot {
+            flex-direction: column;
+            .footer-policy {
+                padding: 0;
+            }
+
+            .footer-copy {
+                padding: 0;
+            }
+        }
+    }
+}
 }
