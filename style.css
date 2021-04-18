@@ -1013,8 +1013,8 @@ a {
 }
 .footer .inner-footer .footer-arrow {
   position: fixed;
-  right: 50px;
-  bottom: 25px;
+  right: 2.5%;
+  bottom: 2.5%;
   height: 50px;
   width: 50px;
   display: flex;
