@@ -101,3 +101,18 @@ window.addEventListener('resize', function() {
     }
     
 });
+
+
+function setTopArrow () {
+    const toTop = document.querySelector(".footer-arrow");
+
+    window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+    } else {
+        toTop.classList.remove("active");
+    }
+    })
+}
+
+setTopArrow();
