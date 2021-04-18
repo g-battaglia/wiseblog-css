@@ -6,9 +6,9 @@
 .main-navbar {
   display: flex;
   flex-direction: column;
-  color: $light;
+  color: $light-text;
   a {
-    color: $light;
+    color: $light-text;
   }
 
   .upper-nav {
@@ -21,10 +21,10 @@
 
       i {
         padding-right: 0.5em;
-        color: $grey;
+        color: $gray-text;
         transition: color 200ms linear;
         &:hover {
-          color: $light;
+          color: $light-text;
           transition: color 200ms linear;
         }
       }
@@ -35,7 +35,7 @@
       font-weight: 400;
       font-size: 3rem;
       letter-spacing: 2px;
-      color: $light;
+      color: $light-text;
       padding: 0.2em;
     }
 
@@ -53,7 +53,7 @@
           color: grey;
           transition: color 200ms linear;
           &:hover {
-            color: $light;
+            color: $light-text;
             transition: color 200ms linear;
           }
         }
@@ -70,10 +70,10 @@
         .navbar-user__icon {
           cursor: pointer;
           padding:1em;
-          color: $grey;
+          color: $gray-text;
           transition: color 200ms linear;
           &:hover {
-            color: $light;
+            color: $light-text;
             transition: color 200ms linear;
           }
         }
@@ -111,7 +111,7 @@
                   color: rgba($dark, 0.55);
                   transition: color 200ms linear;
                   &:hover {
-                    color: $dark;
+                    color: $dark-text;
                     transition: color 200ms linear;
                   }
                 }
@@ -170,7 +170,7 @@
       align-items: center;
 
       a {
-        color: $grey;
+        color: $gray-text;
       }
 
       .navbar-link {
@@ -180,7 +180,7 @@
           padding: 1.25em 2em;
           transition: color 200ms linear;
           &:hover {
-            color: $light;
+            color: $light-text;
             transition: color 200ms linear;
           }
         }
@@ -231,7 +231,7 @@
                 color: rgba($dark, 0.55);
                 transition: color 200ms linear;
                 &:hover {
-                  color: $dark;
+                  color: $dark-text;
                   transition: color 200ms linear;
                   i {
                     transform: rotate(180deg);
@@ -267,7 +267,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: $light;
+  color: $light-text;
   background-color: $dark;
   opacity: 100%;
   transition: opacity 200ms linear;
@@ -305,34 +305,34 @@
         width: 100%;
 
         outline: none;
-        color: $light;
+        color: $light-text;
       }
 
       ::-webkit-input-placeholder {
-        color: $grey;
+        color: $gray-text;
       }
 
       ::-moz-placeholder {
-        color: $grey;
+        color: $gray-text;
       }
 
       :-ms-input-placeholder {
-        color: $grey;
+        color: $gray-text;
       }
 
       ::-ms-input-placeholder {
-        color: $grey;
+        color: $gray-text;
       }
 
       ::placeholder {
-        color: $grey;
+        color: $gray-text;
       }
     }
 
     .search-hint {
       font-size: 1rem;
       padding: 2em;
-      color: $grey;
+      color: $gray-text;
     }
   }
 }
@@ -359,11 +359,11 @@
       .navbar-toggler {
         cursor: pointer;
         display: inline-block;
-        color: $grey;
+        color: $gray-text;
         font-size: 1.5rem;
         transition: color 200ms linear;
         &:hover {
-          color: $light;
+          color: $light-text;
           transition: color 200ms linear;
         }
       }
@@ -384,7 +384,7 @@
 
         a {
           font-size: 1.5rem;
-          // color: $light;
+          // color: $light-text;
         }
       }
 
@@ -424,9 +424,9 @@
               font-size: 1em;
               padding: 0;
               margin: 0;
-              color: $grey;
+              color: $gray-text;
               &:hover {
-                color: $light;
+                color: $light-text;
               }
             }
           }

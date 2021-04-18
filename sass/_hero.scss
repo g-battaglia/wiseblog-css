@@ -7,7 +7,7 @@
   height: fit-content;
   overflow: scroll;
 
-  color: $light;
+  color: $light-text;
 
 
 
@@ -48,15 +48,18 @@
             font-size: 0.75rem;
             padding: 0.5em;
             background-color: $light;
-            color: $dark;
+            color: $dark-text;
             letter-spacing: 0.1em;
             border-radius: $radius;
+            a {
+              color: $dark-text;
+            }
           }
           .article-title {
             font-size: 1.8rem;
             padding: 1rem 0;
             .article__link {
-              color: $light;
+              color: $light-text;
             }
           }
     
@@ -66,10 +69,10 @@
             align-items: flex-end;
             font-size: 0.85rem;
             a {
-              color: $grey;
+              color: $gray-text;
               transition: $color-transition;
               &:hover {
-                color: $light;
+                color: $light-text;
                 transition: $color-transition;
               }
             }

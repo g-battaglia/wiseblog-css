@@ -56,7 +56,7 @@
                     grid-row: 1;
 
                     a {
-                        color: $dark;
+                        color: $dark-text;
                     }
                     
                 }
@@ -67,14 +67,14 @@
                     align-self: start;
 
                     a {
-                        color: $grey;
+                        color: $gray-text;
                         &:hover {
-                            color: $dark;
+                            color: $dark-text;
                         }
                     }
 
                     li {
-                        color: $grey;
+                        color: $gray-text;
                         margin-right: 0.5em;
                     }
                 }
@@ -105,10 +105,10 @@
                 padding-right:0.5em;
             }
             a {
-                color: $grey;
+                color: $gray-text;
                 transition: $color-transition;
                 &:hover {
-                    color: $dark;
+                    color: $dark-text;
                 }
             }
         }
@@ -128,7 +128,7 @@
             .tag-cloud__item {
                 padding: 0.5em;
                 margin: 0.5em;
-                color: $dark;
+                color: $dark-text;
                 box-shadow: $box-shadow;
                 border-radius: $radius;
                 background-color: $grey;

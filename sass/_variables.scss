@@ -4,19 +4,29 @@
 // font-family: 'Abril Fatface', cursive;
 // font-family: 'Lato', sans-serif;
 
-// Colors:
+// Main Colors:
 
 $light: #f5f3f3;
 $dark: #1a1919;
 $highlight: #6eaccc;
 $highlightDark: #8291b7;
 $grey: #aaaaaa;
+$dark-gray: rgba($dark, 0.55);
 $white: #fff;
 
-// Others:
+// Fonts:
 $title-font: "Abril Fatface", "Merriweather", serif;
 $main-font: "Lato", sans-serif; 
 $heading-font: "Merriweather", serif;
+
+// Font colors:
+$dark-text: $dark;
+$light-text: $light;
+$gray-text: $grey;
+$dark-gray-text: $dark-gray;
+
+
+// Others:
 
 $radius: 2.5px;
 $hero-radius: 10px;

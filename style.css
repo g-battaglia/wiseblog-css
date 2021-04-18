@@ -554,6 +554,9 @@ a {
   letter-spacing: 0.1em;
   border-radius: 2.5px;
 }
+.hero-section .hero-articles .article .backdrop-article .inner-article .article-category a {
+  color: #1a1919;
+}
 .hero-section .hero-articles .article .backdrop-article .inner-article .article-title {
   font-size: 1.8rem;
   padding: 1rem 0;
