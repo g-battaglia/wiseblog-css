@@ -32,9 +32,10 @@
                 // justify-content: center;
                 // justify-items: center;
                 padding: 1rem 0;
+                padding-bottom: 2em;
                 display: grid;
                 grid-template-columns: repeat(6, 1fr);
-                grid-template-rows: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
                 .extra-article__img {
                     border-radius: $radius;
                     margin-right: 1em;
@@ -152,12 +153,15 @@
         "posts posts about about"
         "tags tags tags tags";
 
-    }
-}
+        .extra-popular {
+            margin-bottom: 2em;
+            .extra-popular__articles {
+                .extra-popular__xl {
+                    display: none;
+                }
+            }
+        }
 
-@media screen and (max-width: map-get($breakpoints, lg)) {
-    .extra-popular__xl {
-        display: none;
     }
 }
 
@@ -187,10 +191,11 @@
             
 
             .extra-popular__article {
+                padding: 1em;
                 justify-content: center;
                 justify-items: start;
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
 
                 .extra-article__img {
                 }
