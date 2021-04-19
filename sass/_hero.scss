@@ -9,10 +9,6 @@
 
   color: $light-text;
 
-
-
-
-
   .hero-articles {
     min-height: 75vh;
     position: relative;
@@ -24,7 +20,6 @@
     grid-template-areas:
       "first first second second"
       "first first third third";
-    
 
     .article {
       .backdrop-article {
@@ -35,10 +30,10 @@
         transition: background 200ms ease-in-out;
         &:hover {
           background: rgba($dark, 0.75);
-          transition: background .5s ease-out;
+          transition: background 0.5s ease-out;
         }
 
-        .inner-article{
+        .inner-article {
           position: absolute;
           bottom: 0;
           margin: 2em;
@@ -62,7 +57,7 @@
               color: $light-text;
             }
           }
-    
+
           .article-info {
             display: flex;
             flex-direction: row;
@@ -80,7 +75,6 @@
               margin-left: 0.85rem;
             }
           }
-    
         }
       }
     }
@@ -90,16 +84,15 @@
       min-height: 200px;
       grid-area: first;
       background-color: $grey;
-      background-image: url('img/hiphop.jpeg');
+      background-image: url("img/hiphop.jpeg");
       background-size: cover;
       background-position: 50% 80%;
       background-repeat: no-repeat;
 
-      @media screen and (min-width: map-get($breakpoints, lg) +1 ) {
+      @media screen and (min-width: map-get($breakpoints, lg) +1) {
         border-top-left-radius: $hero-radius;
-        border-bottom-left-radius: $hero-radius;      
+        border-bottom-left-radius: $hero-radius;
       }
-
     }
 
     .second-article {
@@ -107,14 +100,14 @@
       height: 100%;
       grid-area: second;
       background-color: $grey;
-      background-image: url('img/concert.jpeg');
+      background-image: url("img/concert.jpeg");
       height: 100%;
       min-height: 200px;
       background-size: cover;
       background-position: 50% 80%;
       background-repeat: no-repeat;
 
-      @media screen and (min-width: map-get($breakpoints, lg) +1 ) {
+      @media screen and (min-width: map-get($breakpoints, lg) +1) {
         border-top-right-radius: $hero-radius;
       }
     }
@@ -123,13 +116,13 @@
       background-color: $grey;
       height: 100%;
       grid-area: third;
-      background-image: url('img/books.jpeg');
+      background-image: url("img/books.jpeg");
       height: 100%;
       min-height: 200px;
       background-size: cover;
       background-position: 50% 80%;
       background-repeat: no-repeat;
-      @media screen and (min-width: map-get($breakpoints, lg) +1 ) {
+      @media screen and (min-width: map-get($breakpoints, lg) +1) {
         border-bottom-right-radius: $hero-radius;
       }
     }
@@ -142,7 +135,6 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-
 
     .hero-articles {
       height: 100%;
@@ -175,8 +167,6 @@
     min-height: fit-content;
     padding-top: 5em;
 
-;
-
     .hero-articles {
       min-height: -webkit-fit-content;
       min-height: -moz-fit-content;
@@ -197,8 +187,6 @@
       .third-article {
         // display: none;
       }
-
-
     }
   }
 }
