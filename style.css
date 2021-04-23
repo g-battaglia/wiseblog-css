@@ -776,6 +776,11 @@ a {
 .single-article {
   width: 100vw;
 }
+@media screen and (max-width: 768px) {
+  .single-article {
+    margin-top: 4em;
+  }
+}
 .single-article .article-content {
   max-width: 100ch;
   display: flex;
@@ -804,13 +809,25 @@ a {
   color: #1a1919;
 }
 .single-article .article-content .media {
-  background-color: #aaaaaa;
   background-size: cover;
   background-position: 55% 50%;
   background-repeat: no-repeat;
   height: 500px;
   width: 100%;
   margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .single-article .article-content .media {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .single-article .article-content .media {
+    height: 250px;
+  }
 }
 .single-article .article-content .main-content h1, .single-article .article-content .main-content h2, .single-article .article-content .main-content h3, .single-article .article-content .main-content h4, .single-article .article-content .main-content h5, .single-article .article-content .main-content h6 {
   margin: 1em 0;
@@ -818,6 +835,24 @@ a {
 }
 .single-article .article-content .main-content p {
   margin: 1em 0;
+}
+.single-article .article-content .main-content li {
+  list-style: inside;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 350;
+  letter-spacing: 0.02em;
+}
+.single-article .article-content .main-content ol li {
+  list-style: decimal inside;
+}
+.single-article .article-content .main-content a {
+  color: rgba(26, 25, 25, 0.55);
+  font-weight: 450;
+  transition: color 200ms linear;
+}
+.single-article .article-content .main-content a:hover {
+  color: #1a1919;
 }
 .single-article .article-content .tags {
   display: flex;
@@ -871,17 +906,15 @@ a {
 .single-article .article-content .author .author-name .name {
   font-size: 1rem;
 }
+.single-article .article-content .author .author-name .name a {
+  color: #1a1919;
+}
 .single-article .comments {
   width: 100vw;
   height: 25vh;
   background-color: rgba(26, 25, 25, 0.1);
 }
 
-@media screen and (max-width: 768px) {
-  .single-article {
-    margin-top: 4em;
-  }
-}
 .extra-section {
   min-height: 75vh;
   height: -webkit-fit-content;

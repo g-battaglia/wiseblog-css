@@ -1,5 +1,8 @@
 .single-article {
     width: 100vw;
+    @media screen and (max-width: map-get($breakpoints, md)) {
+            margin-top: 4em;
+    }
     
     
     .article-content {
@@ -32,13 +35,21 @@
         }
 
         .media {
-            background-color: $grey;
             background-size: cover;
             background-position: 55% 50%;
             background-repeat: no-repeat;
             height: 500px;
             width: 100%;
             margin-bottom: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media screen and (max-width: map-get($breakpoints, md)) {
+                height: 350px;
+            }
+            @media screen and (max-width: map-get($breakpoints, sm)) {
+                height: 250px;
+            }
         }
 
         .main-content {
@@ -49,6 +60,27 @@
 
             p {
                 margin: 1em 0;
+            }
+
+            li {
+                list-style: inside;
+                font-size: 1rem;
+                line-height: 1.8;
+                font-weight: 350;
+                letter-spacing: 0.02em;
+            }
+
+            ol li {
+                list-style: decimal inside;
+            }
+
+            a {
+                color: $dark-gray;
+                font-weight: 450;
+                transition: $color-transition;
+                &:hover {
+                    color: $dark;
+                }
             }
         }
 
@@ -104,6 +136,9 @@
                 align-items: center;
                 .name {
                     font-size: 1rem;
+                    a {
+                        color: $dark;
+                    }
                 }
             }
         }
@@ -117,8 +152,3 @@
     }
 }
 
-@media screen and (max-width: map-get($breakpoints, md)) {
-    .single-article {
-        margin-top: 4em;
-    }
-}
