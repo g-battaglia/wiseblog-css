@@ -1,14 +1,17 @@
 .articles-list-section {
   background-color: white;
+
   .articles-list__header {
     padding: 2em 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h2 {
       text-align: center;
     }
   }
+
   .articles-list-container {
     padding: 0;
     padding-bottom: 4em;
@@ -16,6 +19,7 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+
     .listed-article {
       border-radius: $listed-article-radius;
 
@@ -38,6 +42,7 @@
         background-repeat: no-repeat;
         width: 100%;
         overflow: hidden;
+
         a {
           display: inline-block;
           height: 100%;
@@ -50,11 +55,13 @@
           display: flex;
           justify-content: center;
           align-items: center;
+
           &:hover {
             background: rgba($dark, 0.55);
             color: $light-text;
           }
         }
+
         &:hover {
           overflow: hidden;
         }
@@ -62,13 +69,16 @@
 
       .listed-article__info {
         padding: 2em;
+
         .entry__header {
           margin-bottom: 1em;
+
           .entry__date {
             display: inline-block;
             color: rgba($dark, 0.55);
             margin-bottom: 0.5em;
             transition: $color-transition;
+
             &:hover {
               color: $dark-text;
             }
@@ -76,6 +86,7 @@
 
           .entry__title {
             font-size: 1.75rem;
+
             a {
               color: $dark-text;
             }
@@ -89,9 +100,11 @@
 
         .entry__category {
           margin-top: 1em;
+
           a {
             color: rgba($dark, 0.55);
             transition: $color-transition;
+
             &:hover {
               color: $dark-text;
             }
@@ -107,6 +120,7 @@
     .articles-list__header {
       padding-top: 8em;
     }
+
     .articles-list-container {
     }
   }

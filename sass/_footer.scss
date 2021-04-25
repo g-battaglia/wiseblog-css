@@ -5,23 +5,29 @@
   min-height: fit-content;
   color: $light-text;
   padding: 2em 0;
+
   a {
     color: $gray-text;
+
     &:hover {
       color: $light-text;
     }
   }
+
   .inner-footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     .footer-top {
       display: flex;
       justify-content: center;
+
       .footer-links {
         display: flex;
         justify-content: center;
         width: 100%;
+
         .links-container {
           display: flex;
           flex-direction: column;
@@ -40,6 +46,7 @@
             width: 100%;
             white-space: nowrap;
           }
+
           .links-container__list {
             padding: 1em 0;
             font-weight: 250;
@@ -56,10 +63,12 @@
       justify-content: center;
       margin-top: 4em;
       white-space: nowrap;
+
       .footer-policy {
         padding: 1em;
         text-align: center;
       }
+
       .footer-copy {
         padding: 1em;
         display: flex;
@@ -100,9 +109,11 @@
         flex-direction: column;
       }
     }
+
     .inner-footer {
       .footer-foot {
         flex-direction: column;
+
         .footer-policy {
           padding: 0;
         }

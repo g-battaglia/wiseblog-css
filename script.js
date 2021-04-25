@@ -13,61 +13,59 @@
 // })
 
 function toggler(openIconClass, overlayClass, closeIconClass, hideClassJustName) {
-    const search = document.querySelector(openIconClass)
-    const searchOverlay = document.querySelector(overlayClass)
-    const closeOverlay = document.querySelector(closeIconClass)
-    search.addEventListener("click", function() {
-        // searchOverlay.style.height = document.documentElement.scrollHeight + "px";
-        // document.body.style.overflow = 'hidden';
-        document.body.classList.add('overflow-hiden')
-        searchOverlay.classList.toggle(hideClassJustName);
-    })
+  const search = document.querySelector(openIconClass)
+  const searchOverlay = document.querySelector(overlayClass)
+  const closeOverlay = document.querySelector(closeIconClass)
+  search.addEventListener("click", function () {
+    // searchOverlay.style.height = document.documentElement.scrollHeight + "px";
+    // document.body.style.overflow = 'hidden';
+    document.body.classList.add('overflow-hiden')
+    searchOverlay.classList.toggle(hideClassJustName);
+  })
 
-    closeOverlay.addEventListener("click", function() {
+  closeOverlay.addEventListener("click", function () {
         searchOverlay.style.height = "auto"
         document.body.classList.remove('overflow-hiden')
         searchOverlay.classList.toggle(hideClassJustName);
-        }
-    )
+      }
+  )
 }
 
 toggler(".navbar-search",
-        ".search-overlay",
-        ".close-overlay",
-        "hide-overlay"
-    )
-
-toggler(".navbar-toggler",
-        ".under-nav",
-        ".close-nav-overlay",
-        "hide-overlay-nav"
+    ".search-overlay",
+    ".close-overlay",
+    "hide-overlay"
 )
 
-
+toggler(".navbar-toggler",
+    ".under-nav",
+    ".close-nav-overlay",
+    "hide-overlay-nav"
+)
 
 function hideDropdownMenu(togleClass, iconClass, animatedClassName, menuClass, menuHide) {
-    const t = document.querySelectorAll(togleClass) 
-    const i = document.querySelectorAll(iconClass)
-    const mc = document.querySelectorAll(menuClass)
-    const mh  =  menuHide
-    const animateClassName = animatedClassName
+  const t = document.querySelectorAll(togleClass)
+  const i = document.querySelectorAll(iconClass)
+  const mc = document.querySelectorAll(menuClass)
+  const mh = menuHide
+  const animateClassName = animatedClassName
 
-    for (const [ind, val] of t.entries()) {
-        val.addEventListener("click", function() {
-            i[ind].classList.toggle("navbar-link__rotate");
-        })
+  for (const [ind, val] of t.entries()) {
+    val.addEventListener("click", function () {
+      i[ind].classList.toggle("navbar-link__rotate");
+    })
 
-        val.addEventListener("click", function() {
-            mc[ind].classList.toggle(mh);
-        })
-    }
+    val.addEventListener("click", function () {
+      mc[ind].classList.toggle(mh);
+    })
+  }
 }
 
 hideDropdownMenu(".dropdown-toggler",
-               ".dropdown-link",
-               "navbar-link__rotate",
-               ".dropdown-menu",
-               "hide-dropdown-menu"
+    ".dropdown-link",
+    "navbar-link__rotate",
+    ".dropdown-menu",
+    "hide-dropdown-menu"
 )
 
 // Resize fix:
@@ -80,7 +78,7 @@ hideDropdownMenu(".dropdown-toggler",
 //         // navBar.style.height = "auto"
 //         // document.body.style.overflow = 'visible';
 //     }
-    
+
 // });
 
 
@@ -90,29 +88,29 @@ hideDropdownMenu(".dropdown-toggler",
 //     if ((document.body.classList.contains('overflow-hiden')) && (h > 768)) {
 //         document.body.classList.toggle('overflow-hiden');
 //     }
-    
+
 // });
 
-window.addEventListener('resize', function() {
-    h = document.documentElement.scrollWidth;
-    console.log(h);
-    if (document.body.classList.contains('overflow-hiden')) {
-        document.body.classList.remove('overflow-hiden');
-    }
-    
+window.addEventListener('resize', function () {
+  h = document.documentElement.scrollWidth;
+  console.log(h);
+  if (document.body.classList.contains('overflow-hiden')) {
+    document.body.classList.remove('overflow-hiden');
+  }
+
 });
 
 
-function setTopArrow () {
-    const toTop = document.querySelector(".footer-arrow");
+function setTopArrow() {
+  const toTop = document.querySelector(".footer-arrow");
 
-    window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) {
-        toTop.classList.add("active");
+      toTop.classList.add("active");
     } else {
-        toTop.classList.remove("active");
+      toTop.classList.remove("active");
     }
-    })
+  })
 }
 
 setTopArrow();
