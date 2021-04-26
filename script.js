@@ -43,7 +43,7 @@ toggler(".navbar-toggler",
     "hide-overlay-nav"
 )
 
-function hideDropdownMenu(togleClass, iconClass, animatedClassName, menuClass, menuHide) {
+function toggleDropdownMenu(togleClass, iconClass, animatedClassName, menuClass, menuHide) {
   const t = document.querySelectorAll(togleClass)
   const i = document.querySelectorAll(iconClass)
   const mc = document.querySelectorAll(menuClass)
@@ -61,11 +61,11 @@ function hideDropdownMenu(togleClass, iconClass, animatedClassName, menuClass, m
   }
 }
 
-hideDropdownMenu(".dropdown-toggler",
-    ".dropdown-link",
+toggleDropdownMenu(".menu-item-has-children > a",
+    ".menu-item-has-children > a",
     "navbar-link__rotate",
-    ".dropdown-menu",
-    "hide-dropdown-menu"
+    ".sub-menu",
+    "toggled-on"
 )
 
 // Resize fix:

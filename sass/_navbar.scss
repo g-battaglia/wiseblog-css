@@ -142,11 +142,11 @@
     border-top: 1px solid rgba($grey, 0.1);
 
 
-    .nav-collapsed__title {
+    .under-nav__top {
       display: none;
     }
 
-    .dropdown-menu {
+    .sub-menu {
       position: absolute;
       z-index: -100;
       background-color: transparent;
@@ -162,7 +162,7 @@
         padding: 0.5em 0.5rem;
       }
 
-      .dropdown_a {
+      a{
         padding: 0 2em;
         color: transparent;
         transition: color 200ms linear;
@@ -182,10 +182,10 @@
         color: $gray-text;
       }
 
-      .navbar-link {
+      .menu-item {
         padding: 1.25em 0;
 
-        .navbar-link__a {
+        a {
           padding: 1.25em 2em;
           transition: color 200ms linear;
 
@@ -203,7 +203,7 @@
         }
       }
 
-      .dropdown {
+      .menu-item-has-children {
         i {
           font-size: 0.5em;
           padding: 0.5em;
@@ -213,14 +213,14 @@
         // https://stackoverflow.com/questions/31433000/how-do-i-disable-css-hover-in-a-media-query
         @media screen and (min-width: map-get($breakpoints, md) + 1) {
           &:hover {
-            .navbar-link__a {
+            a {
               i {
                 transform: rotate(180deg);
                 transition: transform 200ms linear;
               }
             }
 
-            .dropdown-menu {
+            .sub-menu {
               display: block;
               margin-top: 1em;
               z-index: 100;
@@ -237,7 +237,7 @@
                 padding: 0.5em 0.5rem;
               }
 
-              .dropdown_a {
+              a{
                 padding: 0 2em;
                 color: rgba($dark, 0.55);
                 transition: color 200ms linear;
@@ -423,7 +423,7 @@
       padding-bottom: 4rem;
       font-size: 1.25rem;
 
-      .nav-collapsed__title {
+      .under-nav__top {
         display: block;
         letter-spacing: 2px;
         text-transform: uppercase;
@@ -431,7 +431,7 @@
         text-align: center;
         padding: 2em;
         padding-bottom: 4rem;
-        border-bottom: 1px solid rgba($grey, 0.1);
+        // border-bottom: 1px solid rgba($grey, 0.1);
 
         .nav-collapsed__heading {
           font-size: 1.5rem;
@@ -452,16 +452,21 @@
         padding: 0 2em;
         background-color: $dark;
 
-        .dropdown-menu {
+        .sub-menu {
           position: static;
           margin: 0;
           padding: 1em 1em;
+          position: absolute;
+          z-index: -1;
+          background-color: $dark;
+          opacity: 0;
+          transition: opacity 100ms linear;
 
           .dropdown-item {
             padding: 0.5em 1em;
             margin: 0;
 
-            .dropdown_a {
+            a{
               font-size: 1em;
               padding: 0;
               margin: 0;
@@ -474,20 +479,19 @@
           }
         }
 
-        .hide-dropdown-menu {
-          position: absolute;
-          z-index: -1;
+        .toggled-on {
+          position: relative;
+          z-index: 1;
           background-color: $dark;
-          opacity: 0;
-          transition: opacity 100ms linear;
+          opacity: 1;          
         }
 
 
-        .navbar-link {
+        .menu-item {
           width: 100%;
           border-bottom: 1px solid rgba($grey, 0.1);
 
-          .navbar-link__a {
+          a {
             padding: 0;
           }
         }
